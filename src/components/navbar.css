@@ -1,0 +1,119 @@
+:root{
+    --color1 : cyan ;
+}
+
+nav{
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    
+}
+
+nav >.left{
+   flex : 30% ;
+}
+
+nav >.mid{
+  flex : 40% ;
+}
+
+nav >.mid i{
+    display: none;
+}
+
+nav >.right{
+    flex : 60% ;
+}
+
+
+nav >.right ul{
+    list-style : none;
+    display: flex;
+    background-color: cyan;
+}
+
+nav >.right ul li{
+    flex : 100% ;
+    
+    text-align: center;
+}
+
+nav >.right ul li a{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    transform: 1s ease;
+}
+
+nav >.right ul li a:hover{
+    background-color: white;
+    color : #111 ;
+}
+
+
+
+
+@media only screen and (max-width : 800px) {
+
+    nav >.mid {
+        align-self: flex-end;
+        display: flex;
+    }
+
+    nav >.mid div{
+        margin-left: auto;
+    }
+    nav >.mid i{
+        display: block;
+
+        padding : 10px;
+        color: white;
+
+    }
+
+    nav >.right{
+        flex : 0;
+    }
+
+
+    nav >.right ul{
+        position: fixed;
+        left: 0;
+        top : 0 ;
+        flex-direction: column;
+        height: 100%;
+        width: 60%;
+        justify-content: center;
+        left : -1000px ;
+        transition: 1s ease;
+        box-shadow: 1px 10px 10px gray;
+    }
+
+    nav >.right ul li{
+        flex : unset ;
+    }
+
+    
+
+    nav >.right .active{
+        left : 0 ;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
